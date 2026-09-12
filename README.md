@@ -1,42 +1,108 @@
+<div align="center">
+
 # 🦌 WildLife AI
 
-### Edge AI–Powered Forest Monitoring and Threat Detection System
+### _Edge AI–Powered Forest Monitoring and Threat Detection System_
 
-WildLife AI is an **Edge AI-based forest monitoring system** designed to detect unusual activities and objects in remote forest environments.
+[![Edge AI](https://img.shields.io/badge/Edge-AI-green.svg)](https://github.com/Gavinduachintha/WildLife-AI)
+[![Raspberry Pi](https://img.shields.io/badge/Raspberry-Pi%205-red.svg)](https://www.raspberrypi.com/)
+[![LoRa](https://img.shields.io/badge/LoRa-SX1278-blue.svg)](https://www.semtech.com/)
+
+</div>
+
+---
+
+## 🎯 Overview
+
+**WildLife AI** is an Edge AI-based forest monitoring system designed to detect unusual activities and objects in remote forest environments.
 
 The system performs **real-time object detection directly on a Raspberry Pi 5**, using a Raspberry Pi Camera 3 NoIR. When a relevant object is detected, the system obtains its location using GPS and transmits the detection information over **LoRa**.
 
 A **Raspberry Pi Pico 2** acts as the receiving station, receiving the LoRa data and displaying the detected information on a compact IPS display.
 
-The system is designed to monitor objects and activities such as:
+### 🎯 Monitored Objects & Activities
 
-* 👤 Humans
-* 🔫 Guns
-* 🚙 Vehicles
-* 🏃 Other unusual activities or objects
+<table>
+  <tr>
+    <td align="center">👤<br><b>Humans</b></td>
+    <td align="center">🔫<br><b>Guns</b></td>
+    <td align="center">🚙<br><b>Vehicles</b></td>
+    <td align="center">🏃<br><b>Unusual Activities</b></td>
+  </tr>
+</table>
 
-The core concept is:
+### 💡 Core Concept
 
 > **Detect locally. Locate accurately. Communicate over long range.**
 
 ---
 
-## ✨ Features
+## ✨ Key Features
 
-* 🧠 Real-time **Edge AI object detection**
-* ⚡ AI inference performed directly on **Raspberry Pi 5**
-* 📷 Raspberry Pi Camera 3 NoIR wide-angle camera
-* 📡 **SX1278 LoRa** long-range communication
-* 📍 **NEO-6M GPS** location tracking
-* 🔭 Target LoRa communication range of approximately **5–10 km**
-* 🖥️ Raspberry Pi Pico 2-based receiving station
-* 🎨 135 × 240 color IPS display
-* 🌐 Designed for environments with limited internet connectivity
-* 🔋 Suitable for remote monitoring applications
+<table>
+  <tr>
+    <td width="50%">
+      <h3>🧠 Edge Intelligence</h3>
+      <ul>
+        <li>Real-time Edge AI object detection</li>
+        <li>AI inference on <b>Raspberry Pi 5</b></li>
+        <li>Local processing, no cloud dependency</li>
+      </ul>
+    </td>
+    <td width="50%">
+      <h3>📡 Communication</h3>
+      <ul>
+        <li><b>SX1278 LoRa</b> long-range wireless</li>
+        <li><b>5–10 km</b> communication range</li>
+        <li>Low bandwidth, high reliability</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <h3>📷 Vision System</h3>
+      <ul>
+        <li>Raspberry Pi Camera 3 NoIR</li>
+        <li>Wide-angle monitoring</li>
+        <li>Low-light capability</li>
+      </ul>
+    </td>
+    <td>
+      <h3>📍 Location Services</h3>
+      <ul>
+        <li><b>NEO-6M GPS</b> tracking</li>
+        <li>Precise geolocation tagging</li>
+        <li>Event position logging</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <h3>🖥️ Display Station</h3>
+      <ul>
+        <li>Raspberry Pi Pico 2 receiver</li>
+        <li><b>135 × 240</b> color IPS display</li>
+        <li>Real-time alert visualization</li>
+      </ul>
+    </td>
+    <td>
+      <h3>🌐 Remote Ready</h3>
+      <ul>
+        <li>Limited internet connectivity</li>
+        <li>Battery-powered deployment</li>
+        <li>Off-grid monitoring capable</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
 ---
 
-# 🏗️ System Architecture
+<br>
+
+## 🏗️ System Architecture
+
+<div align="center">
 
 ```text
                          FOREST ENVIRONMENT
@@ -95,69 +161,100 @@ The core concept is:
                     └─────────────────────┘
 ```
 
----
+</div>
 
-# 🔩 Hardware
-
-| Component                      | Function                           |
-| ------------------------------ | ---------------------------------- |
-| **Raspberry Pi 5 2GB**         | Main Edge AI processing unit       |
-| **Raspberry Pi Camera 3 NoIR** | Image acquisition                  |
-| **SX1278 LoRa**                | Long-range wireless communication  |
-| **NEO-6M GPS**                 | GPS location acquisition           |
-| **Raspberry Pi Pico 2**        | LoRa receiving station             |
-| **135 × 240 IPS Display**      | Detection and status visualization |
+<br>
 
 ---
 
-# 🧠 Edge AI Detection
+## 🔩 Hardware Components
 
-The main intelligence of WildLife AI runs directly on the **Raspberry Pi 5**.
+<div align="center">
+
+|             Component             | Function                           |
+| :-------------------------------: | :--------------------------------- |
+|     🖥️ **Raspberry Pi 5 2GB**     | Main Edge AI processing unit       |
+| 📷 **Raspberry Pi Camera 3 NoIR** | Image acquisition                  |
+|        📡 **SX1278 LoRa**         | Long-range wireless communication  |
+|         📍 **NEO-6M GPS**         | GPS location acquisition           |
+|    🎛️ **Raspberry Pi Pico 2**     | LoRa receiving station             |
+|   🖥️ **135 × 240 IPS Display**    | Detection and status visualization |
+
+</div>
+
+---
+
+---
+
+## 🧠 Edge AI Detection
+
+> The main intelligence of WildLife AI runs directly on the **Raspberry Pi 5**.
 
 The camera continuously provides image frames to the AI processing pipeline. The object detection model analyzes the frames and identifies objects of interest.
 
+<div align="center">
+
 ```text
-Camera
-   │
-   ▼
-Image Frame
-   │
-   ▼
-Pre-processing
-   │
-   ▼
-AI Object Detection
-   │
-   ▼
-Detected Object
-   │
-   ▼
-Detection Decision
+    📷 Camera
+        │
+        ▼
+   🖼️ Image Frame
+        │
+        ▼
+   ⚙️ Pre-processing
+        │
+        ▼
+   🤖 AI Object Detection
+        │
+        ▼
+   🎯 Detected Object
+        │
+        ▼
+   ✅ Detection Decision
 ```
 
-Because the inference is performed locally, the system does not need to continuously upload camera footage to a cloud server.
+</div>
+
+**Key Advantage:** Because the inference is performed locally, the system does not need to continuously upload camera footage to a cloud server.
 
 ---
 
-# 📷 Camera System
+---
 
-WildLife AI uses the **Raspberry Pi Camera 3 NoIR wide-angle camera** as its primary visual sensor.
+## 📷 Camera System
 
-The wide-angle view allows the monitoring node to observe a larger area, while the NoIR configuration makes the camera suitable for low-light applications when appropriate illumination is available.
+**WildLife AI** uses the **Raspberry Pi Camera 3 NoIR wide-angle camera** as its primary visual sensor.
 
-The camera is connected directly to the Raspberry Pi 5 through the CSI camera interface.
+<table>
+  <tr>
+    <td width="50%">
+      <b>📐 Wide-Angle View</b><br>
+      Allows the monitoring node to observe a larger area
+    </td>
+    <td width="50%">
+      <b>🌙 NoIR Configuration</b><br>
+      Suitable for low-light applications with appropriate illumination
+    </td>
+  </tr>
+</table>
+
+**Connection:** The camera is connected directly to the Raspberry Pi 5 through the CSI camera interface.
 
 ---
 
-# 🧠 Detection Process
+---
+
+## 🎯 Detection Process
 
 When an object is detected, the system extracts the relevant information from the inference result.
 
-For example:
+### Example Detection Alert
+
+<div align="center">
 
 ```text
 ┌────────────────────────────┐
-│       DETECTION ALERT      │
+│    🚨 DETECTION ALERT      │
 ├────────────────────────────┤
 │ Object      : HUMAN        │
 │ Confidence  : 91%          │
@@ -167,76 +264,104 @@ For example:
 └────────────────────────────┘
 ```
 
+</div>
+
 The detection information is then prepared for transmission.
 
 ---
 
-# 📍 GPS Location
+---
 
-The **NEO-6M GPS module** is used to obtain the geographic position of the monitoring node.
+## 📍 GPS Location
+
+The **NEO-6M GPS module** obtains the geographic position of the monitoring node.
 
 The GPS information allows the system to associate a detected event with its physical location.
 
-A detection can therefore contain:
+### Detection Data Structure
+
+<div align="center">
 
 ```text
-Object
-Confidence
-Latitude
-Longitude
-Status
+📦 Detection Packet
+├── 🎯 Object
+├── 📊 Confidence
+├── 🌍 Latitude
+├── 🌎 Longitude
+└── ⚠️ Status
 ```
+
+</div>
 
 This provides more useful information than simply reporting that an object was detected.
 
 ---
 
-# 📡 LoRa Communication
+---
 
-WildLife AI uses an **SX1278 LoRa module** to transmit detection information from the remote monitoring node to the receiving station.
+## 📡 LoRa Communication
 
-The communication architecture is:
+**WildLife AI** uses an **SX1278 LoRa module** to transmit detection information from the remote monitoring node to the receiving station.
+
+### Communication Architecture
+
+<div align="center">
 
 ```text
-Raspberry Pi 5
-      │
-      ▼
-   SX1278
-      │
-      │  LoRa
-      │
-      ▼
+  Raspberry Pi 5
+        │
+        ▼
+    SX1278
+        │
+        │  📡 LoRa
+        │
+        ▼
 Raspberry Pi Pico 2
-      │
-      ▼
- IPS Display
+        │
+        ▼
+   IPS Display
 ```
 
-The target communication range is approximately:
+</div>
+
+### 🎯 Target Communication Range
+
+<div align="center">
 
 ## **5–10 km**
 
-Actual communication distance depends on factors such as:
+</div>
 
-* Antenna configuration
-* Terrain
-* Vegetation
-* Obstacles
-* Transmit power
-* Spreading factor
-* Bandwidth
-* Receiver sensitivity
-* Frequency configuration
+<details>
+<summary><b>📊 Factors Affecting Range</b></summary>
 
-Therefore, the stated range represents a target/typical deployment objective rather than a guaranteed distance.
+Actual communication distance depends on:
+
+- 📡 Antenna configuration
+- 🏔️ Terrain
+- 🌳 Vegetation
+- 🧱 Obstacles
+- ⚡ Transmit power
+- 📶 Spreading factor
+- 📊 Bandwidth
+- 🎛️ Receiver sensitivity
+- 📻 Frequency configuration
+
+</details>
+
+> **Note:** The stated range represents a target/typical deployment objective rather than a guaranteed distance.
 
 ---
 
-# 📦 Detection Data
+---
+
+## 📦 Detection Data Format
 
 The Raspberry Pi 5 creates a compact message containing the important information associated with a detection.
 
-Example:
+### Example Transmission
+
+<div align="center">
 
 ```text
 OBJECT=HUMAN
@@ -246,55 +371,72 @@ LON=XX.XXXX
 STATUS=ALERT
 ```
 
-This information is transmitted through the SX1278 LoRa transmitter.
+</div>
 
-The Raspberry Pi Pico 2 receives the LoRa packet and processes the information for display.
+**Transmission Flow:**
+
+1. 📤 Information transmitted through the SX1278 LoRa transmitter
+2. 📡 Signal travels over long-range LoRa link
+3. 📥 Raspberry Pi Pico 2 receives the LoRa packet
+4. ⚙️ Data processed for display
 
 ---
 
-# 🔭 Receiving Station
+---
 
-The receiving side of WildLife AI is built around the **Raspberry Pi Pico 2**.
+## 🔭 Receiving Station
+
+The receiving side of **WildLife AI** is built around the **Raspberry Pi Pico 2**.
 
 The Pico 2 receives the LoRa transmission and acts as the interface between the long-range wireless communication system and the display.
 
+<div align="center">
+
 ```text
-                 Raspberry Pi Pico 2
-                         │
-              ┌──────────┴──────────┐
-              │                     │
-              ▼                     ▼
-        LoRa Receiver          Display Control
-              │                     │
-              └──────────┬──────────┘
-                         │
-                         ▼
-                  135 × 240 IPS
-                     Display
+         Raspberry Pi Pico 2
+                 │
+      ┌──────────┴──────────┐
+      │                     │
+      ▼                     ▼
+📡 LoRa Receiver    🖥️ Display Control
+      │                     │
+      └──────────┬──────────┘
+                 │
+                 ▼
+          135 × 240 IPS
+             Display
 ```
 
-The receiving station can display information such as:
+</div>
 
-* Detected object
-* Confidence
-* GPS coordinates
-* Alert status
-* Communication status
+### 📊 Display Capabilities
+
+The receiving station can display:
+
+- 🎯 Detected object type
+- 📊 Confidence percentage
+- 📍 GPS coordinates
+- ⚠️ Alert status
+- 📡 Communication status
 
 ---
 
-# 🖥️ Display
+---
 
-A **135 × 240 color IPS display** is used to provide a compact visual interface for the receiving station.
+## 🖥️ Display Interface
 
-An example display layout is:
+A **135 × 240 color IPS display** provides a compact visual interface for the receiving station.
+
+### Example Display Layout
+
+<div align="center">
 
 ```text
 ╔══════════════════════╗
-║     WILDLIFE AI      ║
+║   🦌 WILDLIFE AI     ║
 ╠══════════════════════╣
 ║                      ║
-║       ALERT          ║
+║      🚨 ALERT        ║
 ║                      ║
 ║ Object : HUMAN       ║
 ║ Conf.  : 91%         ║
@@ -306,158 +448,176 @@ An example display layout is:
 ╚══════════════════════╝
 ```
 
+</div>
+
 ---
 
-# 🔄 Complete System Workflow
+---
 
-The complete WildLife AI workflow is:
+## 🔄 Complete System Workflow
+
+<div align="center">
 
 ```text
 ┌─────────────────────┐
-│  Forest Environment │
+│  🌲 Forest Environment │
 └──────────┬──────────┘
            │
            ▼
 ┌─────────────────────┐
-│   Camera 3 NoIR     │
+│  📷 Camera 3 NoIR   │
 └──────────┬──────────┘
            │
            ▼
 ┌─────────────────────┐
-│   Raspberry Pi 5    │
+│  🖥️ Raspberry Pi 5   │
 │                     │
-│   AI Inference      │
+│  🤖 AI Inference     │
 └──────────┬──────────┘
            │
            ▼
-    Object Detected?
+    ❓ Object Detected?
        │         │
       NO        YES
        │         │
        │         ▼
-       │    Read GPS
+       │    📍 Read GPS
        │         │
        │         ▼
-       │    Create Alert
+       │   🚨 Create Alert
        │         │
        │         ▼
-       │     SX1278 LoRa
+       │  📡 SX1278 LoRa
        │         │
        │         ▼
        │    ~~~~~~~~~~~
-       │      LoRa Link
+       │    📡 LoRa Link
        │    ~~~~~~~~~~~
        │         │
        │         ▼
-       │  Raspberry Pi Pico 2
+       │  🎛️ Raspberry Pi Pico 2
        │         │
        │         ▼
-       │     IPS Display
+       │   🖥️ IPS Display
        │
-       └──── Continue
+       └──── 🔄 Continue
 ```
+
+</div>
 
 ---
 
-# 🧩 System Components
+---
 
-## Remote Monitoring Node
+## 🧩 System Components
 
-The remote node contains:
+### 📡 Remote Monitoring Node
+
+<div align="center">
 
 ```text
-Raspberry Pi 5
+🖥️ Raspberry Pi 5
       │
-      ├── Raspberry Pi Camera 3 NoIR
+      ├── 📷 Raspberry Pi Camera 3 NoIR
       │
-      ├── SX1278 LoRa
+      ├── 📡 SX1278 LoRa
       │
-      └── NEO-6M GPS
+      └── 📍 NEO-6M GPS
 ```
 
-The Raspberry Pi 5 is responsible for:
+</div>
 
-1. Capturing images
-2. Running AI inference
-3. Identifying relevant objects
-4. Obtaining GPS information
-5. Creating detection messages
-6. Transmitting alerts through LoRa
+**Responsibilities:**
+
+1. 📸 Capturing images
+2. 🤖 Running AI inference
+3. 🎯 Identifying relevant objects
+4. 📍 Obtaining GPS information
+5. 📝 Creating detection messages
+6. 📤 Transmitting alerts through LoRa
+
+### 📥 Receiving Node
+
+<div align="center">
+
+```text
+🎛️ Raspberry Pi Pico 2
+       │
+       ├── 📡 SX1278 LoRa
+       │
+       └── 🖥️ 135 × 240 IPS Display
+```
+
+</div>
+
+**Responsibilities:**
+
+1. 📥 Receiving LoRa packets
+2. ⚙️ Processing detection information
+3. 🔄 Updating the display
+4. 📊 Presenting the received alert information
 
 ---
 
-## Receiving Node
-
-The receiving node contains:
-
-```text
-Raspberry Pi Pico 2
-       │
-       ├── SX1278 LoRa
-       │
-       └── 135 × 240 IPS Display
-```
-
-The Pico 2 is responsible for:
-
-1. Receiving LoRa packets
-2. Processing detection information
-3. Updating the display
-4. Presenting the received alert information
-
 ---
 
-# 🛠️ Software Architecture
+## 🛠️ Software Architecture
 
-The software can be logically divided into four main components:
+The software is logically divided into four main components:
+
+<div align="center">
 
 ```text
 ┌─────────────────────────────┐
-│       Camera Module         │
+│    📷 Camera Module         │
 └──────────────┬──────────────┘
                │
                ▼
 ┌─────────────────────────────┐
-│       AI Detection          │
+│    🤖 AI Detection          │
 └──────────────┬──────────────┘
                │
                ▼
 ┌─────────────────────────────┐
-│       GPS Module            │
+│    📍 GPS Module            │
 └──────────────┬──────────────┘
                │
                ▼
 ┌─────────────────────────────┐
-│      LoRa Transmitter       │
+│   📤 LoRa Transmitter       │
 └──────────────┬──────────────┘
                │
                ▼
-          LoRa Link
+         📡 LoRa Link
                │
                ▼
 ┌─────────────────────────────┐
-│      LoRa Receiver          │
-│      Raspberry Pi Pico 2    │
+│   📥 LoRa Receiver          │
+│   🎛️ Raspberry Pi Pico 2    │
 └──────────────┬──────────────┘
                │
                ▼
 ┌─────────────────────────────┐
-│       IPS Display           │
+│    🖥️ IPS Display           │
 └─────────────────────────────┘
 ```
 
+</div>
+
 ---
 
-# 🚀 Setup
+---
 
-## 1. Clone the Repository
+## 🚀 Getting Started
+
+### Step 1: Clone the Repository
 
 ```bash
 git clone https://github.com/Gavinduachintha/WildLife-AI.git
 cd WildLife-AI
 ```
 
-## 2. Install Dependencies
+### Step 2: Install Dependencies
 
 Create a Python virtual environment:
 
@@ -477,11 +637,13 @@ Install the required packages:
 pip install -r requirements.txt
 ```
 
-> The exact dependencies may vary depending on the AI model and software implementation used in the repository.
+> 💡 **Note:** The exact dependencies may vary depending on the AI model and software implementation used in the repository.
 
 ---
 
-# 📷 Camera Test
+---
+
+## 📷 Camera Test
 
 After connecting the Raspberry Pi Camera 3 NoIR, verify that the camera is detected:
 
@@ -489,60 +651,76 @@ After connecting the Raspberry Pi Camera 3 NoIR, verify that the camera is detec
 rpicam-hello
 ```
 
-If the camera is functioning correctly, the Raspberry Pi should be able to access the camera stream.
+✅ If the camera is functioning correctly, the Raspberry Pi should be able to access the camera stream.
 
 ---
 
-# 📍 GPS Configuration
+---
 
-Connect the NEO-6M GPS module to the configured UART interface of the Raspberry Pi 5.
+## 📍 GPS Configuration
+
+Connect the **NEO-6M GPS module** to the configured UART interface of the Raspberry Pi 5.
 
 The module provides GPS data through serial communication.
 
-The system uses the received information to obtain:
+### 📊 Data Obtained
+
+<div align="center">
 
 ```text
-Latitude
-Longitude
+🌍 Latitude
+🌎 Longitude
 ```
+
+</div>
 
 These coordinates are associated with detection events.
 
 ---
 
-# 📡 LoRa Configuration
+---
 
-The SX1278 modules are used for the LoRa communication link.
+## 📡 LoRa Configuration
+
+The **SX1278 modules** are used for the LoRa communication link.
+
+<div align="center">
 
 ```text
-TRANSMITTER
-Raspberry Pi 5
-      │
-      ▼
-   SX1278
-      │
-      │ LoRa
-      ▼
-   SX1278
-      │
-      ▼
+    TRANSMITTER
+  Raspberry Pi 5
+        │
+        ▼
+     SX1278
+        │
+        │ 📡 LoRa
+        ▼
+     SX1278
+        │
+        ▼
 Raspberry Pi Pico 2
-RECEIVER
+     RECEIVER
 ```
 
-Both LoRa modules must use compatible radio settings, including:
+</div>
 
-* Frequency
-* Spreading Factor
-* Bandwidth
-* Coding Rate
-* Sync Word
+### ⚙️ Compatible Radio Settings
 
-The exact configuration should match the implementation in the source code.
+Both LoRa modules must use compatible settings:
+
+- 📻 **Frequency**
+- 📶 **Spreading Factor**
+- 📊 **Bandwidth**
+- 🔢 **Coding Rate**
+- 🔄 **Sync Word**
+
+> 💡 **Note:** The exact configuration should match the implementation in the source code.
 
 ---
 
-# ▶️ Running WildLife AI
+---
+
+## ▶️ Running WildLife AI
 
 Start the main application on the Raspberry Pi 5:
 
@@ -552,7 +730,9 @@ python main.py
 
 The system initializes the required hardware and starts the detection pipeline.
 
-The general startup sequence is:
+### 🔄 Startup Sequence
+
+<div align="center">
 
 ```text
 Initialize Camera
@@ -566,58 +746,83 @@ Load AI Model
 Start Detection Loop
 ```
 
+</div>
+
 ---
 
-# 🔬 Detection Pipeline
+---
 
-During operation:
+## 🔬 Detection Pipeline
+
+### Operational Flow
+
+<div align="center">
 
 ```text
-1. Capture image
+1. 📸 Capture image
         ↓
-2. Process image
+2. ⚙️ Process image
         ↓
-3. Run AI inference
+3. 🤖 Run AI inference
         ↓
-4. Detect target object
+4. 🎯 Detect target object
         ↓
-5. Obtain GPS position
+5. 📍 Obtain GPS position
         ↓
-6. Generate detection message
+6. 📝 Generate detection message
         ↓
-7. Transmit through LoRa
+7. 📡 Transmit through LoRa
         ↓
-8. Receive using Pico 2
+8. 📥 Receive using Pico 2
         ↓
-9. Display information
+9. 🖥️ Display information
 ```
 
----
-
-# 🌲 Application
-
-WildLife AI is intended for remote environmental monitoring where conventional internet connectivity may not be available.
-
-Potential monitoring scenarios include:
-
-* Forest surveillance
-* Wildlife protection areas
-* Restricted forest zones
-* Remote environmental monitoring
-* Detection of unauthorized human activity
-* Remote security monitoring
-
-The system focuses on transmitting **meaningful detection information** instead of continuously transmitting video.
+</div>
 
 ---
 
-# ☁️ Edge AI vs Cloud Processing
+---
 
-A major design decision in WildLife AI is performing inference directly on the Raspberry Pi 5.
+## 🌲 Application Scenarios
 
-### Conventional Cloud-Based System
+**WildLife AI** is intended for remote environmental monitoring where conventional internet connectivity may not be available.
 
-```text
+### 🎯 Use Cases
+
+<table>
+  <tr>
+    <td align="center">🌳<br><b>Forest Surveillance</b></td>
+    <td align="center">🦌<br><b>Wildlife Protection</b></td>
+    <td align="center">🚫<br><b>Restricted Zones</b></td>
+  </tr>
+  <tr>
+    <td align="center">🌲<br><b>Environmental Monitoring</b></td>
+    <td align="center">👤<br><b>Unauthorized Activity</b></td>
+    <td align="center">🔒<br><b>Remote Security</b></td>
+  </tr>
+</table>
+
+### 💡 Key Advantage
+
+> The system focuses on transmitting **meaningful detection information** instead of continuously transmitting video.
+
+---
+
+---
+
+## ☁️ Edge AI vs Cloud Processing
+
+A major design decision in **WildLife AI** is performing inference directly on the Raspberry Pi 5.
+
+<table>
+  <tr>
+    <th width="50%">🌐 Conventional Cloud-Based System</th>
+    <th width="50%">⚡ WildLife AI (Edge)</th>
+  </tr>
+  <tr>
+    <td>
+      <pre>
 Camera
    ↓
 Internet
@@ -627,11 +832,10 @@ Cloud
 AI Model
    ↓
 Alert
-```
-
-### WildLife AI
-
-```text
+      </pre>
+    </td>
+    <td>
+      <pre>
 Camera
    ↓
 Raspberry Pi 5
@@ -643,162 +847,231 @@ Detection
 LoRa
    ↓
 Pico 2
-```
+      </pre>
+    </td>
+  </tr>
+</table>
 
-This architecture reduces the need for continuous high-bandwidth connectivity.
+### ✅ Benefits
+
+This architecture **reduces the need for continuous high-bandwidth connectivity**.
 
 ---
 
-# ⚡ Why LoRa?
+---
+
+## ⚡ Why LoRa?
 
 Forest environments can have limited cellular and Wi-Fi coverage.
 
-LoRa provides a low-bandwidth, long-range communication method suitable for transmitting compact telemetry and detection information.
+**LoRa** provides a low-bandwidth, long-range communication method suitable for transmitting compact telemetry and detection information.
 
-WildLife AI therefore separates the system into two layers:
+### 🏗️ System Architecture
+
+**WildLife AI** separates the system into two layers:
+
+<div align="center">
 
 ```text
-High Computation
-       │
-       ▼
- Raspberry Pi 5
-       │
-       │
-       │ Small Detection Data
-       ▼
-      LoRa
-       │
-       ▼
+  High Computation
+         │
+         ▼
+   Raspberry Pi 5
+         │
+         │
+         │ 📦 Small Detection Data
+         ▼
+        LoRa
+         │
+         ▼
  Raspberry Pi Pico 2
-       │
-       ▼
-    Display
+         │
+         ▼
+      Display
 ```
 
-The camera data remains at the monitoring node while the important detection information is transmitted to the receiving station.
+</div>
+
+> 💡 The camera data remains at the monitoring node while the important detection information is transmitted to the receiving station.
 
 ---
 
-# ⚙️ Engineering Design
+---
 
-WildLife AI combines several engineering domains:
+## ⚙️ Engineering Design
 
-| Domain                  | Technology                |
-| ----------------------- | ------------------------- |
-| Edge Computing          | Raspberry Pi 5            |
-| Computer Vision         | Camera + Object Detection |
-| Artificial Intelligence | Edge AI Model             |
-| Embedded Systems        | Raspberry Pi Pico 2       |
-| Wireless Communication  | SX1278 LoRa               |
-| Positioning             | NEO-6M GPS                |
-| Human Interface         | IPS Display               |
-| Programming             | Python / Embedded C/C++   |
+**WildLife AI** combines several engineering domains:
+
+<div align="center">
+
+| Domain                         | Technology                |
+| :----------------------------- | :------------------------ |
+| ⚡ **Edge Computing**          | Raspberry Pi 5            |
+| 👁️ **Computer Vision**         | Camera + Object Detection |
+| 🤖 **Artificial Intelligence** | Edge AI Model             |
+| 🔧 **Embedded Systems**        | Raspberry Pi Pico 2       |
+| 📡 **Wireless Communication**  | SX1278 LoRa               |
+| 📍 **Positioning**             | NEO-6M GPS                |
+| 🖥️ **Human Interface**         | IPS Display               |
+| 💻 **Programming**             | Python / Embedded C/C++   |
+
+</div>
 
 ---
 
-# 📁 Repository Structure
+---
 
-A typical project structure is:
+## 📁 Repository Structure
+
+<div align="center">
 
 ```text
-WildLife-AI/
+📂 WildLife-AI/
 │
-├── README.md
-├── requirements.txt
+├── 📄 README.md
+├── 📄 requirements.txt
 │
-├── raspberry-pi/
-│   ├── main.py
-│   ├── detection/
-│   ├── gps/
-│   └── lora/
+├── 📂 raspberry-pi/
+│   ├── 🐍 main.py
+│   ├── 📂 detection/
+│   ├── 📂 gps/
+│   └── 📂 lora/
 │
-├── pico2/
-│   ├── receiver/
-│   ├── lora/
-│   └── display/
+├── 📂 pico2/
+│   ├── 📂 receiver/
+│   ├── 📂 lora/
+│   └── 📂 display/
 │
-├── model/
+├── 📂 model/
 │   └── ...
 │
-├── hardware/
-│   ├── wiring/
-│   └── schematics/
+├── 📂 hardware/
+│   ├── 📂 wiring/
+│   └── 📂 schematics/
 │
-├── images/
+├── 📂 images/
 │   └── ...
 │
-└── LICENSE
+└── 📄 LICENSE
 ```
 
-The structure may differ depending on the current implementation.
+</div>
+
+> 💡 **Note:** The structure may differ depending on the current implementation.
 
 ---
 
-# ⚠️ Limitations
+---
 
-WildLife AI is a prototype/research project.
+## ⚠️ Limitations & Considerations
 
-Detection performance depends on factors such as:
+> **WildLife AI** is a prototype/research project.
 
-* AI model accuracy
-* Training dataset
-* Lighting conditions
-* Camera position
-* Object distance
-* Object size
-* Occlusion
-* Environmental conditions
+### 🎯 Detection Performance Factors
 
-LoRa performance also depends on:
+<details>
+<summary><b>Click to expand factors affecting detection accuracy</b></summary>
 
-* Antenna
-* Terrain
-* Vegetation
-* Radio configuration
-* Transmit power
-* Receiver sensitivity
-* Environmental conditions
+- 🤖 AI model accuracy
+- 📊 Training dataset
+- 💡 Lighting conditions
+- 📷 Camera position
+- 📏 Object distance
+- 📐 Object size
+- 🚧 Occlusion
+- 🌦️ Environmental conditions
 
-The **5–10 km range should therefore not be considered a guaranteed operating distance** for every deployment.
+</details>
+
+### 📡 LoRa Performance Factors
+
+<details>
+<summary><b>Click to expand factors affecting communication range</b></summary>
+
+- 📡 Antenna
+- 🏔️ Terrain
+- 🌳 Vegetation
+- ⚙️ Radio configuration
+- ⚡ Transmit power
+- 📶 Receiver sensitivity
+- 🌦️ Environmental conditions
+
+</details>
+
+> ⚠️ **Important:** The **5–10 km range should not be considered a guaranteed operating distance** for every deployment.
 
 ---
 
-# 👨‍💻 Author
+---
 
-## Gavindu Achintha
+## 👨‍💻 Author
 
-Undergraduate in **Applied Electronics**
+<div align="center">
 
-Interested in:
+### Gavindu Achintha
 
-* Embedded Systems
-* Edge AI
-* Robotics
-* Computer Vision
-* Machine Learning
-* Low-Level Programming
-* Backend Engineering
+\*Undergraduate in **Applied Electronics\***
 
-### Links
+</div>
 
-* GitHub: [Gavinduachintha](https://github.com/Gavinduachintha)
+### 🎯 Interests
+
+<table>
+  <tr>
+    <td align="center">🔧<br><b>Embedded Systems</b></td>
+    <td align="center">🤖<br><b>Edge AI</b></td>
+    <td align="center">🦾<br><b>Robotics</b></td>
+  </tr>
+  <tr>
+    <td align="center">👁️<br><b>Computer Vision</b></td>
+    <td align="center">📊<br><b>Machine Learning</b></td>
+    <td align="center">⚙️<br><b>Low-Level Programming</b></td>
+  </tr>
+  <tr>
+    <td align="center" colspan="3">🌐<br><b>Backend Engineering</b></td>
+  </tr>
+</table>
+
+<div align="center">
+
+### 🔗 Connect
+
+[![GitHub](https://img.shields.io/badge/GitHub-Gavinduachintha-181717?style=for-the-badge&logo=github)](https://github.com/Gavinduachintha)
+
+</div>
 
 ---
 
-# 📜 License
+---
+
+<div align="center">
+
+## 📜 License
 
 This project is provided under the license included in this repository.
 
 See [`LICENSE`](LICENSE) for details.
 
+</div>
+
 ---
 
-<p align="center">
+<div align="center">
 
-### 🦌 WildLife AI
+<br>
 
-**Edge Intelligence for Remote Forest Monitoring**
+# 🦌 WildLife AI
 
-*See locally. Think locally. Communicate remotely.*
+### **Edge Intelligence for Remote Forest Monitoring**
 
-</p>
+_See locally. Think locally. Communicate remotely._
+
+<br>
+
+**[⭐ Star this project](https://github.com/Gavinduachintha/WildLife-AI)** • **[🐛 Report Bug](https://github.com/Gavinduachintha/WildLife-AI/issues)** • **[💡 Request Feature](https://github.com/Gavinduachintha/WildLife-AI/issues)**
+
+---
+
+Made with ❤️ for Wildlife Protection
+
+</div>
