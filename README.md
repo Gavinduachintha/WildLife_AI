@@ -1068,7 +1068,7 @@ _See locally. Think locally. Communicate remotely._
 
 <br>
 
-**[⭐ Star this project](https://github.com/Gavinduachintha/WildLife-AI)** • **[🐛 Report Bug](https://github.com/Gavinduachintha/WildLife-AI/issues)** • **[💡 Request Feature](https://github.com/Gavinduachintha/WildLife-AI/issues)**
+**[⭐ Star this project](https://github.com/Gavinduachintha/WildLife-AI)** • **[🐛 Report Bug]([https://github.com/Gavinduachintha/WildLife-AI/issues](https://github.com/Gavinduachintha/WildLife_AI/issues))** • **[💡 Request Feature](https://github.com/Gavinduachintha/WildLife-AI/issues)**
 
 ---
 
