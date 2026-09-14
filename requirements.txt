@@ -1,0 +1,5 @@
+spidev
+lgpio
+opencv-python
+ultralytics
+picamera2
