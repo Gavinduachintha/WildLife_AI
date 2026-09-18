@@ -1,4 +1,10 @@
+<div align="center">
+
 # WildLife AI
+
+</div>
+<img width="1984" height="793" alt="ChatGPT Image Sep 19, 2026, 12_58_54 AM" src="https://github.com/user-attachments/assets/236941c9-658f-4fe7-94a1-399204e31724" />
+
 
 ## Introduction
 
